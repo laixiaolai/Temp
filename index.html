@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>JOEONE_25</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+*{padding: 0;margin: 0;border: none;}
+body{width: 100%; height: 100%;}
+.wrap{width: 100%;overflow: hidden;}
+#nav{background: url(http://img03.taobaocdn.com/imgextra/i3/293015773/TB2vP.baXXXXXbsXXXXXXXXXXXX-293015773.png);text-align: center;height: 80px;padding-top: 20px;position: fixed;_position:absolute;left: 0;top: 0;width: 100%;z-index: 10000;cursor: default;}
+#nav ul{margin: 0;overflow: hidden;}
+#nav li{display: inline-block;*display: inline;}
+#nav a{position: relative;display: block;*display: inline-block;text-decoration: none;outline: 0;padding: 10px 25px; line-height:28px;margin: 0.6em 0.2em;font-weight: 700;border-radius: 8px;-moz-transition: background-color .2s ease-in-out;-webkit-transition: background-color .2s ease-in-out;-o-transition: background-color .2s ease-in-out;-ms-transition: background-color .2s ease-in-out;transition: background-color .2s ease-in-out;color: #fff;}
+#nav a img{vertical-align: bottom;}
+#nav a:hover{background: #383838;}
+.section_wrap{width: 990px;margin:0 auto;position: relative;box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.05), inset 0px 2px 3px 0px rgba(0,0,0,0.1);}
+.section{width: 1920px; position: absolute;left: -465px;top: 0; text-align: center;height: 600px;}
+.section1{background:#000 url(http://img03.taobaocdn.com/imgextra/i3/293015773/TB2PdY.aXXXXXc0XXXXXXXXXXXX-293015773.jpg) top center;position: relative;margin-top: 100px;}
+.suipian{position: relative;}
+.suipian img{vertical-align: top;-webkit-transition: -webkit-transform .2s linear;
+-moz-transition: -moz-transform .2s linear;-o-transition: -o-transform .2s linear;transition: transform .2s linear; position: absolute;top:0; left: 0;}
+.suipian img:hover {-webkit-transform: translateX(-8px);-moz-transform: translateX(-8px);-ms-transform: translateX(-8px);-o-transform: translateX(-8px);transform: translateX(-8px);}
+.logo{position: absolute;display: block;left: 630px; top: 125px;z-index: 10;}
+
+.section2{background:#000 url(http://img02.taobaocdn.com/imgextra/i2/293015773/TB21zn.aXXXXXc6XXXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative; padding-top: 160px;height: 757px;}
+
+.section2 ul{ list-style:none; height:550px; width:960px; padding:0; margin:0 auto; position: relative;}
+.section2 ul li{ display:block;position:absolute;-webkit-perspective: 500;-moz-perspective: 500;-o-perspective: 500;perspective: 500; -webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;-o-transform-style: preserve-3d;transform-style: preserve-3d;
+	-webkit-transition-property: perspective;-moz-transition-property: perspective;-o-transition-property: perspective;transition-property: perspective; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;-o-transition-duration: 0.5s;transition-duration: 0.5s;}
+.section2 ul .li1{ top:150px;left: 25px; z-index: 1;}
+.section2 ul .li2{ top:40px;left: 213px; z-index: 0}
+.section2 ul .li3{ top:0px;left: 550px;}
+.section2 ul .li4{ top:120px;left: 730px;}
+.section2 ul .li5{ top:320px;left: 460px;}
+.section2 ul li:hover{ -webkit-perspective:5000;-moz-perspective:5000;-o-perspective:5000;perspective:5000; cursor: pointer;}
+.section2 ul li img{ -moz-box-shadow:0 0 10px #888; -webkit-box-shadow:0 0 10px #888; box-shadow:0 0 10px #888;-webkit-transform: rotateY(20deg);-moz-transform: rotateY(20deg);-o-transform: rotateY(20deg);transform: rotateY(20deg); -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;-o-transition-duration: 0.5s;transition-duration: 0.5s;}
+.section2 ul li:hover img{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg);-moz-box-shadow:0 0 20px #888; -webkit-box-shadow:0 0 20px #888; box-shadow:0 0 20px #888;}
+
+.pop_bg{display: none;position:absolute;top:0;left:0;width:100%;height:100%;z-index: 1040;background-color: #000;opacity: 0.75;filter: alpha(opacity=75);}
+.pop_box{margin:0 auto;width:808px; height: 488px;display: none; z-index: 99999;}
+.pop_box a{display: block;}
+.pop_box .cls_btn{ padding-left: 732px;}
+.pop_box .pop_img{ width: 732px;}
+
+.section4{}
+#container{width: 1920px;height: 638px;margin:0 auto;position: relative;left:-465px;overflow: hidden;}
+#list{width: 13440px;height: 917px;position: absolute;z-index: 1;}
+#list img{float: left;width: 1920px;}
+#buttons{position: absolute;height: 12px;width: 100px; display:block;z-index: 2;bottom: 20px;left: 880px;}
+#buttons li{cursor: pointer;float: left; display:block;border: 1px solid #fff;width: 10px;height: 10px;border-radius: 6px; margin-right: 3px;background: #444;}
+#buttons .on{background: orangered;}
+.arrow{cursor: pointer;display: none; color:#FFF;line-height: 60px;text-align: center;font-size: 46px;font-weight: bold;width: 60px; height: 60px;position: absolute;z-index: 2;top: 320px;background-color: rgba(0,0,0,.3);opacity:0.3;filter:alpha(opacity=30);text-decoration: none;}
+.arrow:hover{background-color:rgba(0,0,0,.7);opacity:0.7;filter:alpha(opacity=70);}
+#container:hover .arrow{display: block;}
+#prev{left: 465px; }
+#next{right: 465px;}
+
+.section5{background:#000 url(http://img01.taobaocdn.com/imgextra/i1/293015773/TB216gaaXXXXXb3XXXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative;padding-top: 164px; height: 136px;}
+.section5 .weibo{width: 424px; padding-left: 499px; height:136px;margin: 0 auto;text-align: center;font-size: 18px;}
+.section5 .weibo a{ display: inline; float: left; width: 130px; height: 36px;line-height: 40px;background-color: #b21036;margin: 0 5px;box-shadow: 0 0 5px #FFF;}
+.section5 .weibo a:hover{box-shadow: 0 0 12px #FFF}
+.share_btn{display:block; position:absolute; top:20px;right:530px;width: 205px;height: 52px;line-height: 52px;text-align: center;font-weight: 700;font-size: 24px;color: #fff;text-decoration:none;text-shadow:0 0 10px #fff;border-radius: 5px;margin: 10px auto;background-image:-webkit-linear-gradient(360deg, #53586b, #252935);background-image:linear-gradient(360deg,#53586b, #252935);transition: all .5s ease;box-shadow: 0 0 8px #fff;}
+.share_btn:hover{background-image:-webkit-linear-gradient(360deg,  #252935,#53586b);background-image:linear-gradient(360deg,#252935, #53586b);}
+.section6{background:#000 url(http://img02.taobaocdn.com/imgextra/i2/293015773/TB2upIXaXXXXXcRXXXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative;padding-top: 162px;height: 551px;}
+.section6 ul{width: 990px;margin:0 auto;}
+.section6 ul:after{content: "";clear: both;display: block;overflow: hidden;}
+.section6 li{display: inline;float: left; width: 330px;height: 483px; }
+.section6 a{display: block;position: relative; width: 282px;height: 483px;margin: 0 auto;box-shadow: 0 0 8px #000;}
+.section6 img{display: block;position: absolute;top: 0;left: 0;z-index: 1;}
+
+.section_wrap .works li {
+  float: left;
+  overflow: hidden;
+  display: block;
+  width: 330px;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.section_wrap .works ul li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -moz-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -ms-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -o-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  transition: all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+}
+.section_wrap .works ul li .thumb {
+display: block;
+max-width: 420px;
+width: 100%;
+-webkit-transition: all 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+-moz-transition: all 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+-ms-transition: all 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+-o-transition: all 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+transition: all 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+}
+.section_wrap .works ul li a:hover .thumb {
+  position: relative;
+  z-index: 0;
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.section7{background:#FFF;position: relative; padding-top: 29px;height: 177px;}
+.section7 ul{width: 990px;margin: 0 auto;}
+.section7 ul:after{content: "";display: block;clear: both;overflow: hidden;}
+.section7 li{display: block;float: left;width: 123px;height: 158px;overflow: hidden;}
+.section7 a{display: block;width: 111px;height: 146px; border: 2px solid #000;margin: 4px auto; font-size: 20px;font-weight: 600; text-decoration:none;background-color: #000; color: #FFF; text-shadow: 0 0 5px #FFF;-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;}
+.section7 a:hover{background-color: #FFF; border-color: #FFF;box-shadow: 0 0 8px #000;}
+.section8{background:#000 url(http://img02.taobaocdn.com/imgextra/i2/293015773/TB23H7caXXXXXbqXXXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative; padding-top: 294px;height: 90px;}
+.section8 .foot_nav{width: 300px;margin: 0 auto; height: 60px;}
+.section8 a{ display: inline; float: left; width: 120px; height: 30px;line-height: 30px; color:#FFF;font-size:14px;text-decoration:none;text-align:center;background-color: #000;margin: 0 15px;box-shadow: 0 0 5px #FFF;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;}
+.section8 a:hover{box-shadow: 0 0 12px #FFF;background-color: #FFF; color: #000;}
+.section8 .tmallshop {height: 15px;width:500px;margin:0 auto 14px;border-bottom: 1px solid #4d4d4d;
+text-align: center;}
+.section8 .tmallshop a {float:none;font-size: 12px;letter-spacing:2px;color: #4d4d4d;background-color: #000;box-shadow: none; padding:0 10px;font-family: Microsoft Yahei;}
+.section8 .tmallshop a:hover{text-shadow: 0 0 8px #fff;}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	//轮播
+	var container=document.getElementById('container');
+	var list=document.getElementById('list');
+	var buttons=document.getElementById('buttons').getElementsByTagName('li');
+	var prev=document.getElementById('prev');
+	var next=document.getElementById('next');
+	var index=1;
+	var animated=false;
+	var timer=null;
+
+	function showButton(){
+		for (var i =0;i< buttons.length; i++) {
+			if(buttons[i].className=='on'){
+				buttons[i].className='';
+				break;
+			}
+		};
+		buttons[index-1].className='on';
+	}
+
+	function animate(offset){
+		animated=true;
+		var newLeft=parseInt(list.style.left)+offset;
+		var time=300;//位移总时间
+		var interval=10;//位移间隔时间
+		var speed=offset/(time/interval);//每次位移量
+
+		function go(){
+			if((speed<0&&parseInt(list.style.left)>newLeft)||(speed>0&&parseInt(list.style.left)<newLeft)){
+				list.style.left=parseInt(list.style.left)+speed+'px';					
+				setTimeout(go,interval);
+			}
+			else{
+				animated=false;
+				list.style.left=newLeft+'px';
+				if(newLeft>-1920){
+					list.style.left=-9600+'px';
+				}
+				if(newLeft<-9600){
+					list.style.left=-1920+'px';
+				}
+			}
+		}
+		go();
+	}
+	
+	function play(){
+		timer=setInterval(function(){next.onclick();},9600);
+	}
+	function stop(){
+		clearInterval(timer);
+	}
+
+	next.onclick=function(){
+		if(index==5){
+			index=1;
+		}
+		else{
+			index+=1;
+		}
+		showButton();
+		if(!animated){
+			animate(-1920);
+		}
+		
+	}
+	prev.onclick=function(){
+		if (index==1) {
+			index=5;
+		}
+		else{
+			index-=1;
+		}			
+		showButton();
+		if(!animated){
+			animate(1920);
+		}
+	}
+
+	for(var	i=0;i<buttons.length;i++){
+		buttons[i].onclick=function(){
+			if(this.className=='on'){
+				return;
+			}
+			var myIndex=parseInt(this.getAttribute('index'));
+			var offset=(myIndex-index)*-1920;
+			if(!animated){
+				animate(offset);
+			}
+			index=myIndex;
+			showButton();
+		}
+	}
+	
+	container.onmouseover=stop;
+	container.onmouseout=play;
+	play();
+	//轮播结束            
+}
+</script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="wrap">
+
+	<div id="nav">
+		<ul>
+			<li><a href="http://joeone.tmall.com/"  target="_blank" title="首页">首页</a></li>
+			<li><a href="http://joeone.tmall.com/"  target="_blank" title="职场新人">职场新人</a></li>
+			<li><a href="http://joeone.tmall.com/"  target="_blank" title="商务精英">商务精英</a></li>
+			<li><a href="http://joeone.tmall.com/"  target="_blank" title="优雅绅士">优雅绅士</a></li>
+			<li><a href="http://joeone.tmall.com/"  target="_blank" title="老王子">老王子</a></li>
+			<li><a href="http://joeone.tmall.com/" target="_blank"  title="九牧王最MAN">九牧王最MAN</a></li>
+			<li><a href="http://joeone.tmall.com"  target="_blank"title="官方旗舰店" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2n_f.aXXXXXXzXpXXXXXXXXXX-293015773.png" /></a></li>
+	  </ul>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section1">
+			<div class="suipian">
+				<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2VDf_aXXXXXamXpXXXXXXXXXX-293015773.png" />
+			</div>
+			<a id="tr_sd" class="logo" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2Zp3baXXXXXXmXpXXXXXXXXXX-293015773.png" alt="九牧王，专注男裤25周年" /></a>
+		</div>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section2">
+			<ul>
+		    	<li id="li1" class="li1">
+		        	<img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2dDsXaXXXXXcrXXXXXXXXXXXX-293015773.jpg" width="199" />		        </li>
+		        <li id="li2" class="li2">
+		        	<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2dRj.aXXXXXXkXpXXXXXXXXXX-293015773.jpg" width="199" />		        </li>
+		        <li id="li3" class="li3">
+		        	<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2xeT.aXXXXXXWXpXXXXXXXXXX-293015773.jpg" width="199" />		        </li>
+		        <li id="li4" class="li4">
+		        	<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2zm7eaXXXXXXhXXXXXXXXXXXX-293015773.jpg" width="199" />		        </li>
+		        <li id="li5" class="li5">
+		        	<img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2ez6_aXXXXXavXpXXXXXXXXXX-293015773.jpg" width="199" />		        </li>
+	      </ul>
+		</div>
+		<div id="pop_wrap">
+			<div class="pop_bg" id="pop_bg"></div>
+	        <div class="pop_box" id="pop_box1">
+	        	<a class="cls_btn" id="cls_btn1" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2wGIXaXXXXXXeXpXXXXXXXXXX-293015773.png" /></a>
+	            <a class="pop_img" href="http://joeone.tmall.com/" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2.AAaaXXXXXbAXXXXXXXXXXXX-293015773.jpg" /></a>
+	        </div>
+	        <div class="pop_box" id="pop_box2">
+	        	<a class="cls_btn" id="cls_btn2" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2wGIXaXXXXXXeXpXXXXXXXXXX-293015773.png" /></a>
+	            <a class="pop_img" href="http://joeone.tmall.com/" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2zgv.aXXXXXXpXpXXXXXXXXXX-293015773.jpg" /></a>
+	        </div>
+	        <div class="pop_box" id="pop_box3">
+	        	<a class="cls_btn" id="cls_btn3" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2wGIXaXXXXXXeXpXXXXXXXXXX-293015773.png" /></a>
+	            <a class="pop_img" href="http://joeone.tmall.com/" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2PPsbaXXXXXbjXXXXXXXXXXXX-293015773.jpg" /></a>
+	        </div>
+	        <div class="pop_box" id="pop_box4">
+	        	<a class="cls_btn" id="cls_btn4" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2wGIXaXXXXXXeXpXXXXXXXXXX-293015773.png" /></a>
+	            <a class="pop_img" href="http://joeone.tmall.com/" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2rS.baXXXXXb2XXXXXXXXXXXX-293015773.jpg" /></a>
+	        </div>
+	        <div class="pop_box" id="pop_box5">
+	        	<a class="cls_btn" id="cls_btn5" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2wGIXaXXXXXXeXpXXXXXXXXXX-293015773.png" /></a>
+	            <a class="pop_img" href="http://joeone.tmall.com/" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2BgAbaXXXXXXKXpXXXXXXXXXX-293015773.jpg" /></a>
+	        </div>
+		</div>
+	</div>
+
+	<div class="section_wrap">
+		<div id="container">
+			<div id="list" style="left:-1920px;">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2ji.caXXXXXa.XXXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2h5f_aXXXXXXWXpXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2i5P9aXXXXXXTXpXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2ONEaaXXXXXceXXXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2usgXaXXXXXc9XXXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2ji.caXXXXXa.XXXXXXXXXXXX-293015773.jpg" alt="">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2h5f_aXXXXXXWXpXXXXXXXXXX-293015773.jpg" alt="">
+			</div>
+			<ul id="buttons" style="display:none;">
+				<li class="on" index="1"></li>
+				<li index="2"></li>
+				<li index="3"></li>
+				<li index="4"></li>
+				<li index="5"></li>
+			</ul>
+			<a href="javascript:;" class="arrow" id="prev">&lt;</a>
+			<a href="javascript:;" class="arrow" id="next">&gt;</a>
+		</div>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section5">
+			<a class="share_btn" rel="nofollow" href="#wb_zb">立即转发</a>
+			<div class="weibo">
+				<a href="#" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2InY.aXXXXXXbXpXXXXXXXXXX-293015773.png" /></a><a href="#" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2WkAXaXXXXXcOXXXXXXXXXXXX-293015773.png" /></a><a href="#" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2f4oXaXXXXXcWXXXXXXXXXXXX-293015773.png" /></a>				
+			</div>
+		</div>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section6 works">
+			<ul>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img class="thumb" src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2rhf.aXXXXXcWXXXXXXXXXXXX-293015773.jpg" /><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2mDAXaXXXXXcLXXXXXXXXXXXX-293015773.png" /></a></li>
+			  <li><a href="http://joeone.tmall.com/" target="_blank"><img class="thumb" src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB24zEbaXXXXXbkXXXXXXXXXXXX-293015773.jpg" /><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2Sgf_aXXXXXaDXpXXXXXXXXXX-293015773.png" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img class="thumb" src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB269.caXXXXXXoXXXXXXXXXXXX-293015773.jpg" /><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2LAn9aXXXXXcKXXXXXXXXXXXX-293015773.png" /></a></li>
+		  </ul>
+	  </div>
+  </div>
+<div style="width:990px;margin: 0 auto ;">
+    	<a name="wb_zb" style="display:block;height:100px;"></a>
+    	<wb:livestream skin="silver" width="auto" height="500" topic="九牧王" uid="1052981072"></wb:livestream>
+    </div>
+	<div class="section_wrap">
+		<div class="section section7">
+			<ul>
+				<li><a href="http://joeone.tmall.com/category-344694892-404780553.htm?spm=a1z10.1.w5001-3440073698.11.qt2kQo&search=y&catName=%CE%F7%BF%E3&scene=taobao_shop#bd" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB21Nn.aXXXXXc2XXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-344705020-404780691.htm?spm=a1z10.1.w5001-3440073698.12.qt2kQo&search=y&catName=%D0%DD%CF%D0%BF%E3&scene=taobao_shop#bd" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2qv3baXXXXXbNXXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-344712869-404782637.htm?spm=a1z10.1.w5001-3440073698.13.qt2kQo&search=y&catName=%C5%A3%D7%D0%BF%E3&scene=taobao_shop#bd" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2CQP_aXXXXXcJXXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-789227894-404780888.htm?spm=a1z10.1.w5001-3440073698.14.qt2kQo&search=y&catName=%B3%C4%C9%C0&scene=taobao_shop#bd" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2UdMXaXXXXXc8XXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-958900444-406001176.htm?spm=a1z10.1.w5001-3440073698.15.qt2kQo&search=y&parentCatId=956997925&parentCatName=%CD%E2%CC%D7&catName=%BC%D0%BF%CB&scene=taobao_shop#bd" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2sOv6aXXXXXaWXpXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-789227899-404782790.htm?spm=a1z10.1.w5001-3440073698.16.qt2kQo&search=y&catName=T%D0%F4&scene=taobao_shop#bd" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2cVkbaXXXXXb0XXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-956997925-426112524.htm?spm=a1z10.1.w5001-3440073698.18.qt2kQo&search=y&catName=%CD%E2%CC%D7&scene=taobao_shop#bd" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2FcEaaXXXXXcsXXXXXXXXXXXX-293015773.jpg" /></a></li>
+			  <li><a href="http://joeone.tmall.com/category-958613350.htm?spm=a1z10.1.w5001-3440073698.19.qt2kQo&search=y&catName=%C3%AB%C9%C0&scene=taobao_shop#bd" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2HskXaXXXXXXeXpXXXXXXXXXX-293015773.jpg" /></a></li>
+		  </ul>
+		</div>
+	</div>
+	<div class="section_wrap">
+		<div class="section section8">
+			<div class="foot_nav">
+				<a href="#">返回顶部</a><a href="#" target="_blank">进入店铺</a>
+			</div>
+			<div class="tmallshop"><a href="http://joeone.tmall.com" target="_blank">HTTP://JOEONE.TMALL.COM</a></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+function getId(id){
+    var $=document.getElementById(id);
+    return $;
+};
+function getByClass(clsName, parent){
+    //判断是否有父元素这个参数传进来
+
+    var oParent=parent?document.getElementById(parent):document;
+    //1.所有的选出来
+    var aEle=oParent.getElementsByTagName('*');
+    var arr=[];
+    
+    //2.筛选——选中塞进arr
+    for(var i=0;i<aEle.length;i++)
+    {
+        if(aEle[i].className==clsName)
+        {
+            arr.push(aEle[i]);
+        }
+    }
+    
+    //3.把所有的返回出去
+    return arr;
+};
+//弹出窗口
+function pop_box(trigger,popBg,popBox,closeBtn){
+    var oTrigger=getId(trigger);
+    var oPopBg=getId(popBg);
+    var oPopBox=getId(popBox);
+    var oCloseBtn=getId(closeBtn);
+    var height=document.documentElement.scrollHeight||document.body.scrollHeight;
+    var cHeight=document.documentElement.clientHeight||document.body.clientHeight;
+    var cWidth=document.documentElement.clientWidth||document.body.clientWidth;
+    oTrigger.onclick=function(){
+    	
+        oPopBg.style.cssText="display:block;height:"+height+"px;width:"+cWidth+"px";
+        oPopBox.style.cssText="display:block;position:fixed;";
+        var oTop=parseInt((cHeight-oPopBox.offsetHeight)/2);
+        var oLeft=parseInt((cWidth-oPopBox.offsetWidth)/2);
+        oPopBox.style.top=oTop+"px";
+        oPopBox.style.left=oLeft+"px";
+    }
+    oPopBg.onclick=oCloseBtn.onclick=function(){
+        oPopBox.style.display="none";
+        oPopBg.style.display="none";
+    }
+
+}
+
+pop_box('li1','pop_bg','pop_box1','cls_btn1');
+pop_box('li2','pop_bg','pop_box2','cls_btn2');
+pop_box('li3','pop_bg','pop_box3','cls_btn3');
+pop_box('li4','pop_bg','pop_box4','cls_btn4');
+pop_box('li5','pop_bg','pop_box5','cls_btn5');
+ 
+</script>
+
+</body>
+</html>

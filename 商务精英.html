@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>JOEONE_common</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+*{padding: 0;margin: 0;border: none;}
+body{width: 100%; height: 100%;}
+img{vertical-align: bottom;}
+.wrap{width: 100%;overflow: hidden;}
+#nav{background: url(http://img03.taobaocdn.com/imgextra/i3/293015773/TB2U37XaXXXXXXiXpXXXXXXXXXX-293015773.png);text-align: center;height: 80px;padding-top: 20px;position: fixed;_position:absolute;left: 0;top: 0;width: 100%;z-index: 10000;cursor: default;}
+#nav ul{margin: 0;overflow: hidden;}
+#nav li{display: inline-block;*display: inline;}
+#nav a{position: relative;display: block;*display: inline-block;text-decoration: none;outline: 0;padding: 10px 25px; line-height:28px;margin: 0.6em 0.2em;font-weight: 700;border-radius: 8px;-moz-transition: background-color .2s ease-in-out;-webkit-transition: background-color .2s ease-in-out;-o-transition: background-color .2s ease-in-out;-ms-transition: background-color .2s ease-in-out;transition: background-color .2s ease-in-out;color: #fff;}
+#nav a img{vertical-align: bottom;}
+#nav a:hover{background: #383838;}
+.section_wrap{width: 990px;margin:0 auto;position: relative;box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.05), inset 0px 2px 3px 0px rgba(0,0,0,0.1);}
+.section{width: 1920px; position: absolute;left: -465px;top: 0; text-align: center;height: auto;}
+.section1{background:#FFF;position: relative;margin-top: 100px;}
+
+.section5{background:#000 url(http://img04.taobaocdn.com/imgextra/i4/293015773/TB2lh3XaXXXXXXyXpXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative;padding-top: 164px; height: 136px;}
+.section5 .weibo{width: 424px; padding-left: 499px; height:136px;margin: 0 auto;text-align: center;font-size: 18px;}
+.section5 .weibo a{ display: inline; float: left; width: 130px; height: 36px;line-height: 40px;background-color: #b21036;margin: 0 5px;box-shadow: 0 0 5px #FFF;}
+.section5 .weibo a:hover{box-shadow: 0 0 12px #FFF}
+.share_btn{display:block; position:absolute; top:20px;right:530px;width: 205px;height: 52px;line-height: 52px;text-align: center;font-weight: 700;font-size: 24px;color: #fff;text-decoration:none;text-shadow:0 0 10px #fff;border-radius: 5px;margin: 10px auto;background-image:-webkit-linear-gradient(360deg, #53586b, #252935);background-image:linear-gradient(360deg,#53586b, #252935);transition: all .5s ease;box-shadow: 0 0 8px #fff;}
+.share_btn:hover{background-image:-webkit-linear-gradient(360deg,  #252935,#53586b);background-image:linear-gradient(360deg,#252935, #53586b);}
+
+.section2{background:#FFF;position: relative; padding-top: 60px;height: 320px;}
+
+.section2 ul{ list-style:none; height:550px; width:960px; padding:0; margin:0 auto; position: relative;}
+.section2 ul li{ display:block; float:left;-webkit-perspective: 500;-moz-perspective: 500;-o-perspective: 500;perspective: 500; -webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;-o-transform-style: preserve-3d;transform-style: preserve-3d;
+	-webkit-transition-property: perspective;-moz-transition-property: perspective;-o-transition-property: perspective;transition-property: perspective; -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;-o-transition-duration: 0.5s;transition-duration: 0.5s;}
+
+.section2 ul li:hover{ -webkit-perspective:5000;-moz-perspective:5000;-o-perspective:5000;perspective:5000; cursor: pointer;}
+.section2 ul li img{ -moz-box-shadow:0 0 10px #888; -webkit-box-shadow:0 0 10px #888; box-shadow:0 0 10px #888;-webkit-transform: rotateY(20deg);-moz-transform: rotateY(20deg);-o-transform: rotateY(20deg);transform: rotateY(20deg); -webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;-o-transition-duration: 0.5s;transition-duration: 0.5s;}
+.section2 ul li:hover img{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg);-moz-box-shadow:0 0 20px #000; -webkit-box-shadow:0 0 20px #000; box-shadow:0 0 20px #000;}
+
+.section8{background:#000 url(http://img02.taobaocdn.com/imgextra/i2/293015773/TB23H7caXXXXXbqXXXXXXXXXXXX-293015773.jpg) no-repeat top center;position: relative; padding-top: 294px;height: 90px;}
+.section8 .foot_nav{width: 300px;margin: 0 auto; height: 60px;}
+.section8 a{ display: inline; float: left; width: 120px; height: 30px;line-height: 30px; color:#FFF;font-size:14px;text-decoration:none;text-align:center;background-color: #000;margin: 0 15px;box-shadow: 0 0 5px #FFF;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;}
+.section8 a:hover{box-shadow: 0 0 12px #FFF;background-color: #FFF; color: #000;}
+.section8 .tmallshop {height: 15px;width:500px;margin:0 auto 14px;border-bottom: 1px solid #4d4d4d;
+text-align: center;}
+.section8 .tmallshop a {float:none;font-size: 12px;letter-spacing:2px;color: #4d4d4d;background-color: #000;box-shadow: none; padding:0 10px;font-family: Microsoft Yahei;}
+.section8 .tmallshop a:hover{text-shadow: 0 0 8px #fff;}
+</style>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="wrap">
+
+	<div id="nav">
+		<ul>
+			<li><a href="http://joeone.tmall.com/" title="首页">首页</a></li>
+			<li><a href="http://joeone.tmall.com/" title="职场新人">职场新人</a></li>
+			<li><a href="http://joeone.tmall.com/" title="商务精英">商务精英</a></li>
+			<li><a href="http://joeone.tmall.com/" title="优雅绅士">优雅绅士</a></li>
+			<li><a href="http://joeone.tmall.com/" title="老王子">老王子</a></li>
+			<li><a href="http://joeone.tmall.com/" title="九牧王最MAN">九牧王最MAN</a></li>
+			<li><a href="http://joeone.tmall.com/" title="官方旗舰店"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB24nD.aXXXXXXWXpXXXXXXXXXX-293015773.png" /></a></li>
+		</ul>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section1">
+          <img style="display:block" src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB283EgaXXXXXXqXXXXXXXXXXXX-293015773.jpg"/><img style="display:block" src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB21zMfaXXXXXayXXXXXXXXXXXX-293015773.jpg"/>
+			<div style="width:990px;margin:0 auto">
+				<table id="__01" width="990" height="3079" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" rowspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.15.w4011-3857506863.94.mxeaYa&id=26473504412&rn=3f4860f35408f17f83870d7db57a6251" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2mQcXaXXXXXb_XXXXXXXXXXXX-293015773.jpg" alt="" width="426" height="727" border="0"></a></td>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.109.WqKBSv&id=40321435074&rn=155f01902e921aa417940f7d2bb6918a" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB24csaaXXXXXcuXXXXXXXXXXXX-293015773.jpg" alt="" width="269" height="362" border="0"></a></td>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.128.5xWeZ7&id=40485625468&rn=91572ee615c6e771c8f6cc00050c542c" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2vg3caXXXXXaFXXXXXXXXXXXX-293015773.jpg" alt="" width="295" height="362" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.34.TRpwnN&id=40550314177&rn=bcf86788c569289175c0b1a562c44d6d" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2DQMXaXXXXXcGXXXXXXXXXXXX-293015773.jpg" alt="" width="269" height="365" border="0"></a></td>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.109.96QsEL&id=40503254742&rn=5bf46306c9fdb34b7fa90959b9232b17" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB29XZaaXXXXXczXXXXXXXXXXXX-293015773.jpg" alt="" width="295" height="365" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2xC3baXXXXXbEXXXXXXXXXXXX-293015773.jpg" width="990" height="442" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.89.iNgIBv&id=40240382621&rn=ff5b27544d839ca0c3dc75b62f516317" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB22akfaXXXXXakXXXXXXXXXXXX-293015773.jpg" alt="" width="295" height="363" border="0"></a></td>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.159.lhT0ux&id=40329650711&rn=91e87eabcd8bdd1de69081d5b995473b" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2eMUXaXXXXXc3XXXXXXXXXXXX-293015773.jpg" alt="" width="271" height="363" border="0"></a></td>
+		<td colspan="2" rowspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.46.lR4fKM&id=40354334772&rn=27715914bc17ec54babfdeb2f8393ee3" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2qc3caXXXXXaQXXXXXXXXXXXX-293015773.jpg" alt="" width="424" height="728" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.94.Z4bE6L&id=40116653232&rn=26658d07e86c7f9b305f13fc21bbc7b4" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2GyEfaXXXXXXyXXXXXXXXXXXX-293015773.jpg" alt="" width="295" height="365" border="0"></a></td>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.159.8Nc28d&id=39798734343&rn=2f0e0060ce132e5945e9f29484886afa" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2ofZfaXXXXXXIXXXXXXXXXXXX-293015773.jpg" alt="" width="271" height="365" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2UREfaXXXXXXFXXXXXXXXXXXX-293015773.jpg" width="990" height="444" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.134.baeJ19&id=40463755497&rn=03afcc7b5cef278debff1614196c7df7" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2D9ocaXXXXXX8XXXXXXXXXXXX-293015773.jpg" alt="" width="426" height="737" border="0"></a></td>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.174.zJ1AEj&id=40304015656&rn=c38f8518d23871421c0dbe00b4e1816e" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2CXEbaXXXXXbTXXXXXXXXXXXX-293015773.jpg" alt="" width="269" height="361" border="0"></a></td>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.203.P1GdAI&id=40319954462&rn=b672ef420b4ed47e03be7d6b83da61f5" target="_blank"><img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/九牧王-25周年庆子页面-商务精英(990)_15.jpg" alt="" width="295" height="361" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.282.RJ04AI&id=40484258785&rn=313f85375085341be0077c9da3ebd094" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB266oaaXXXXXa0XXXXXXXXXXXX-293015773.jpg" alt="" width="269" height="376" border="0"></a></td>
+		<td>
+			<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w4011-2541235973.347.RJ04AI&id=40333263204&rn=313f85375085341be0077c9da3ebd094" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2W5UbaXXXXXc3XXXXXXXXXXXX-293015773.jpg" alt="" width="295" height="376" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/分隔符.gif" width="295" height="1" alt=""></td>
+		<td>
+			<img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/分隔符.gif" width="131" height="1" alt=""></td>
+		<td>
+			<img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/分隔符.gif" width="140" height="1" alt=""></td>
+		<td>
+			<img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/分隔符.gif" width="129" height="1" alt=""></td>
+		<td>
+			<img src="file:///E|/Y盘/2014起始/九牧王/99-10活动/代码制作/JMW_inner/images/分隔符.gif" width="295" height="1" alt=""></td>
+	</tr>
+</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="section_wrap">
+		<div class="section section5">
+			<a class="share_btn" rel="nofollow" href="#wb_zb">立即转发</a>
+			<div class="weibo">
+				<a href="#" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2TvkaaXXXXXcSXXXXXXXXXXXX-293015773.png" /></a><a href="#" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2qucXaXXXXXXEXpXXXXXXXXXX-293015773.png" /></a><a href="#" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2cT_.aXXXXXX3XpXXXXXXXXXX-293015773.png" /></a>				
+			</div>
+		</div>
+	</div>
+
+
+	<div style="width:990px;margin: 0 auto ;">
+    	<a name="wb_zb" style="display:block;height:100px;"></a>
+    	<wb:livestream skin="silver" width="auto" height="500" topic="九牧王" uid="1052981072"></wb:livestream>
+    </div>
+
+	<div class="section_wrap">
+		<div class="section section2">
+			<ul>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2PLZbaXXXXXcgXXXXXXXXXXXX-293015773.jpg" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2_VIcaXXXXXcaXXXXXXXXXXXX-293015773.jpg" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img04.taobaocdn.com/imgextra/i4/293015773/TB2ungaaXXXXXb3XXXXXXXXXXXX-293015773.jpg" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img01.taobaocdn.com/imgextra/i1/293015773/TB2wzscaXXXXXbHXXXXXXXXXXXX-293015773.jpg" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img03.taobaocdn.com/imgextra/i3/293015773/TB2n9j.aXXXXXXhXpXXXXXXXXXX-293015773.jpg" /></a></li>
+				<li><a href="http://joeone.tmall.com/" target="_blank"><img src="http://img02.taobaocdn.com/imgextra/i2/293015773/TB2eoQaaXXXXXcuXXXXXXXXXXXX-293015773.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="section_wrap">
+		<div class="section section8">
+			<div class="foot_nav">
+				<a href="#">返回顶部</a><a href="#" target="_blank">进入店铺</a>
+			</div>
+			<div class="tmallshop"><a href="http://joeone.tmall.com" target="_blank">HTTP://JOEONE.TMALL.COM</a></div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
